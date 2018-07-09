@@ -9,10 +9,10 @@ namespace Jenkins.Net.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly string PublishVersion = ConfigurationManager.AppSettings["PublishVersion"];
+        private readonly string PublishVersion = ConfigurationManager.AppSettings["Environment"];
         public ActionResult Index()
         {
-            ViewBag.PublishVersion = PublishVersion;
+            ViewBag.Environment = PublishVersion;
             return View();
         }
 
